@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mxm-1O-ZaO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pXu-dM-v7k"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5h-M0-gf6">
+                                <rect key="frame" x="297" y="629" width="62" height="30"/>
+                                <state key="normal" title="我的位置"/>
+                                <connections>
+                                    <action selector="myLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JwA-JH-IAU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rJ-dm-zMX">
+                                <rect key="frame" x="282" y="591" width="77" height="30"/>
+                                <state key="normal" title="导航去成都"/>
+                                <connections>
+                                    <action selector="gotochengdu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vp5-yk-S8Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="S5h-M0-gf6" secondAttribute="trailing" constant="16" id="1dj-EH-hFP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mxm-1O-ZaO" secondAttribute="bottom" id="DD4-DV-6IW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S5h-M0-gf6" secondAttribute="bottom" constant="8" id="F6V-K2-pG5"/>
+                            <constraint firstItem="Mxm-1O-ZaO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KUF-3L-jht"/>
+                            <constraint firstItem="S5h-M0-gf6" firstAttribute="top" secondItem="2rJ-dm-zMX" secondAttribute="bottom" constant="8" id="aF3-Jt-csy"/>
+                            <constraint firstItem="Mxm-1O-ZaO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="isJ-kg-Txw"/>
+                            <constraint firstAttribute="trailing" secondItem="2rJ-dm-zMX" secondAttribute="trailing" constant="16" id="s1F-Do-K0A"/>
+                            <constraint firstAttribute="trailing" secondItem="Mxm-1O-ZaO" secondAttribute="trailing" id="xCb-gu-Vcw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Mxm-1O-ZaO" id="ijC-kh-3Uq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
